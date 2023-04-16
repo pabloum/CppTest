@@ -1,14 +1,10 @@
 cmake_minimum_required(VERSION 3.26.3)
 
-project(your_project_name)
+project(CppExperiment)
 
-# Add all your source files to a variable
-set(SOURCES
-    HolaMundo.cpp
-)
-
-# Add an executable target and link all the source files
-add_executable(primero ${SOURCES})
+file(GLOB SOURCES "./*.cpp")
+file(GLOB HEADERS "./*.h")
+add_executable(executable ${SOURCES} ${HEADERS})
 
 # Specify the compiler and any compiler flags you need
 set(CMAKE_CXX_COMPILER g++)
