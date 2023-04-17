@@ -8,7 +8,8 @@ int main()
 
     LevelFactory factory = LevelFactory();
 
-    factory.GetLevel(Level::OOP);
+    auto level = factory.GetLevel(Level::Basic);
+
 
     return 0;
 }

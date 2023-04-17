@@ -1,18 +1,36 @@
-#ifndef __BASIC__
-#define __BASIC__
+#ifndef __LEVEL_FACTORY__
+#define __LEVEL_FACTORY__
 
 #include <iostream>
+#include <map>
+#include <memory>
+#include "CppBasic/Headers/BasicCpp.h"
 #include "ILevelCpp.h"
 #include "Enums/Levels.h"
 
 class LevelFactory 
 {
-    public:
-    ILevelCpp GetLevel(Level level) 
+    std::map<Level, std::shared_ptr<ILevelCpp>> m_levels = 
     {
-        std::cout << "The Factory is working" << std::endl;
-        return ILevelCpp(); 
+        {Level::OOP, nullptr},
+        {Level::Basic, std::make_shared<BasicCpp>()},
+        {Level::Advanced, nullptr}
+    };
+
+    public:
+    std::shared_ptr<ILevelCpp> GetLevel(Level level) 
+    {
+        auto& levelPtr = m_levels.at(level);
+
+        if (levelPtr != nullptr)
+        {
+            levelPtr->SaySomething();
+        }
+        
+        return levelPtr;
     }
+
+    private:
 };
 
-#endif /* __BASIC__ */
+#endif /* __LEVEL_FACTORY__ */
