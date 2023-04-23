@@ -14,19 +14,16 @@ class LevelFactory
     {
         {Level::OOP, nullptr},
         {Level::Basic, std::make_shared<BasicCpp>()},
-        {Level::Advanced, nullptr}
+        {Level::Advanced, nullptr},
+        {Level::Expert, nullptr},
+        {Level::PattertsIdioms, nullptr},
+        {Level::Testing, nullptr}
     };
 
     public:
     std::shared_ptr<ILevelCpp> GetLevel(Level level) 
     {
         auto& levelPtr = m_levels.at(level);
-
-        if (levelPtr != nullptr)
-        {
-            levelPtr->SaySomething();
-        }
-        
         return levelPtr;
     }
 
