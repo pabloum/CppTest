@@ -7,9 +7,9 @@ void ExecuteProgram();
 
 int main()
 {
-    std::cout << "Hello, World! Beginning of App" << std::endl;
+    std::cout << "Hello, World! Beginning of App \n \n" << std::endl;
     ExecuteProgram();
-    std::cout << "Bye, World! End of App" << std::endl;
+    std::cout << "\n \nBye, World! End of App" << std::endl;
 
     return 0;
 }
@@ -22,6 +22,6 @@ void ExecuteProgram()
 
     if (level != nullptr)
     {
-        level->SaySomething();
+        level->PrintQuestionsAndAnswers();
     }
 }

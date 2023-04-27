@@ -8,9 +8,8 @@
 class BasicCpp : public ILevelCpp
 {
     public:
-    void SaySomething() override;
-
-    private:
+    BasicCpp();
+    void PrintQuestionsAndAnswers() override;
 };
 
 #endif /* __BASIC__ */

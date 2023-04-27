@@ -1,7 +1,17 @@
 #include "Headers/BasicCpp.h"
 #include <iostream>
 
-void BasicCpp::SaySomething()
+BasicCpp::BasicCpp()
 {
-    std::cout << "Hello from Basic Cpp" << std::endl;
+    questionsAndAnswers = 
+    {
+        { "Basic question?", "Basic answer" }
+    };
+}
+
+void BasicCpp::PrintQuestionsAndAnswers()
+{
+    std::cout << "These are the Basic C++ questions:" << std::endl;
+
+    ShowQA();
 }
