@@ -20,8 +20,18 @@ target_sources(exec
         ILevelCpp.h
         LevelFactory.h
         Enums/Levels.h
-        CppBasic/Headers/BasicCpp.h
-        CppBasic/BasicCpp.cpp
+        BasicCpp/BasicCpp.h
+        BasicCpp/BasicCpp.cpp
+        AdvancedCpp/AdvancedCpp.h
+        AdvancedCpp/AdvancedCpp.cpp
+        ExpertCpp/ExpertCpp.h
+        ExpertCpp/ExpertCpp.cpp
+        Patterns_Idioms/PatternsIdioms.h
+        Patterns_Idioms/PatternsIdioms.cpp
+        Testing/TestingLevel.h
+        Testing/TestingLevel.cpp
+        OOP/Oop.h
+        OOP/Oop.cpp
 )
 
 # Add header files using target_include_directories
