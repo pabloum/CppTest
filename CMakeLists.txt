@@ -17,20 +17,11 @@ add_executable(exec)
 target_sources(exec
     PRIVATE
         Main.cpp
-        Factory/LevelFactory.h
-        Helpers/Levels.h
-        Levels/Interfaces/ILevelCpp.h
-        Levels/BasicCpp/BasicCpp.h
         Levels/BasicCpp/BasicCpp.cpp
-        Levels/AdvancedCpp/AdvancedCpp.h
         Levels/AdvancedCpp/AdvancedCpp.cpp
-        Levels/ExpertCpp/ExpertCpp.h
         Levels/ExpertCpp/ExpertCpp.cpp
-        Levels/Patterns_Idioms/PatternsIdioms.h
         Levels/Patterns_Idioms/PatternsIdioms.cpp
-        Levels/Testing/TestingLevel.h
         Levels/Testing/TestingLevel.cpp
-        Levels/OOP/Oop.h
         Levels/OOP/Oop.cpp
 )
 
