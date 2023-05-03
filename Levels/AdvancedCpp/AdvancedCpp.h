@@ -3,7 +3,7 @@
 #define __ADVANCED__
 
 #include <iostream>
-#include "../ILevelCpp.h"
+#include "../../Levels/Interfaces/ILevelCpp.h"
 
 class AdvancedCpp : public ILevelCpp
 {

@@ -1,7 +1,7 @@
 
 #include <iostream>
-#include "LevelFactory.h"
-#include "Enums/Levels.h"
+#include "Factory/LevelFactory.h"
+#include "Helpers/Levels.h"
 
 void ExecuteProgram(Level level);
 

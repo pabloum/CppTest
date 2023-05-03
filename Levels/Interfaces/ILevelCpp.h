@@ -3,7 +3,7 @@
 #define __LEVEL__
 
 #include <list>
-#include "QuestionAnswer.h"
+#include "../../Helpers/QuestionAnswer.h"
 
 class ILevelCpp
 {

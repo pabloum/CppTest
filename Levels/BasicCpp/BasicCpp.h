@@ -3,7 +3,7 @@
 #define __BASIC__
 
 #include <iostream>
-#include "../ILevelCpp.h"
+#include "../../Levels/Interfaces/ILevelCpp.h"
 
 class BasicCpp : public ILevelCpp
 {

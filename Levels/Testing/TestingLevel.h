@@ -3,7 +3,7 @@
 #define __TESTING__
 
 #include <iostream>
-#include "../ILevelCpp.h"
+#include "../../Levels/Interfaces/ILevelCpp.h"
 
 class TestingLevel : public ILevelCpp
 {

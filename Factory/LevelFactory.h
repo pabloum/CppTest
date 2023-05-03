@@ -4,14 +4,14 @@
 #include <iostream>
 #include <map>
 #include <memory>
-#include "BasicCpp/BasicCpp.h"
-#include "AdvancedCpp/AdvancedCpp.h"
-#include "ExpertCpp/ExpertCpp.h"
-#include "Patterns_Idioms/PatternsIdioms.h"
-#include "Testing/TestingLevel.h"
-#include "OOP/Oop.h"
-#include "ILevelCpp.h"
-#include "Enums/Levels.h"
+#include "../Levels/BasicCpp/BasicCpp.h"
+#include "../Levels/AdvancedCpp/AdvancedCpp.h"
+#include "../Levels/ExpertCpp/ExpertCpp.h"
+#include "../Levels/Patterns_Idioms/PatternsIdioms.h"
+#include "../Levels/Testing/TestingLevel.h"
+#include "../Levels/OOP/Oop.h"
+#include "../Levels/Interfaces/ILevelCpp.h"
+#include "../Helpers/Levels.h"
 
 class LevelFactory 
 {

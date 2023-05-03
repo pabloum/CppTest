@@ -2,7 +2,7 @@
 #define __PATTERNS_IDIOMS__
 
 #include <iostream>
-#include "../ILevelCpp.h"
+#include "../../Levels/Interfaces/ILevelCpp.h"
 
 class PatternsIdioms : public ILevelCpp
 {
