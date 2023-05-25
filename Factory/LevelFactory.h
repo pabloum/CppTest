@@ -15,21 +15,21 @@
 
 class LevelFactory 
 {
-    std::map<Level, std::shared_ptr<ILevelCpp>> m_levels = 
+    const std::map<Level, std::function<std::shared_ptr<ILevelCpp>()>> m_levels = 
     {
-        {Level::OOP, std::make_shared<Oop>()},
-        {Level::Basic, std::make_shared<BasicCpp>()},
-        {Level::Advanced, std::make_shared<AdvancedCpp>()},
-        {Level::Expert, std::make_shared<ExpertCpp>()},
-        {Level::PattertsIdioms, std::make_shared<PatternsIdioms>()},
-        {Level::Testing, std::make_shared<TestingLevel>()}
+        {Level::OOP, []() { return std::make_shared<Oop>(); }},
+        {Level::Basic, []() { return std::make_shared<BasicCpp>(); }},
+        {Level::Advanced, []() { return std::make_shared<AdvancedCpp>(); }},
+        {Level::Expert, []() { return std::make_shared<ExpertCpp>(); }},
+        {Level::PattertsIdioms, []() { return std::make_shared<PatternsIdioms>(); }},
+        {Level::Testing, []() { return std::make_shared<TestingLevel>(); }}
     };
 
     public:
     std::shared_ptr<ILevelCpp> GetLevel(Level level) 
     {
-        auto& levelPtr = m_levels.at(level);
-        return levelPtr;
+        auto& levelCreator = m_levels.at(level);
+        return levelCreator();
     }
 
     private:
