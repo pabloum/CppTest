@@ -5,16 +5,30 @@
 #include "Factory/LevelFactory.h"
 #include "Helpers/Levels.h"
 
-void ExecuteProgram(Level level)
+const std::list<Level> levelList = 
+{
+    Level::OOP,
+    Level::Basic,
+    Level::Advanced,
+    Level::Expert,
+    Level::PattertsIdioms,
+    Level::Testing
+};
+
+void ExecuteProgram()
 {
     LevelFactory factory = LevelFactory();
 
-    std::shared_ptr<ILevelCpp> levelObject = factory.GetLevel(level);
-
-    if (levelObject != nullptr)
+    for (auto level : levelList)
     {
-        levelObject->PrintQuestionsAndAnswers();
+        std::shared_ptr<ILevelCpp> levelObject = factory.GetLevel(level);
+
+        if (levelObject != nullptr)
+        {
+            levelObject->PrintQuestionsAndAnswers();
+        }
     }
+
 }
 
 #endif /*_EXECUTE_PROGRAM_*/

@@ -18,6 +18,7 @@ class ILevelCpp
             std::cout << "Q: " << questionAnswer.Question << std::endl;
             std::cout << "A: " << questionAnswer.Answer << std::endl;
         }
+        std::cout << "\n";
     }
 
     protected:
