@@ -23,6 +23,7 @@ target_sources(exec
         Levels/Patterns_Idioms/PatternsIdioms.cpp
         Levels/Testing/TestingLevel.cpp
         Levels/OOP/Oop.cpp
+        Factory/LevelFactory.cpp
 )
 
 # Add header files using target_include_directories

@@ -15,24 +15,11 @@
 
 class LevelFactory 
 {
-    const std::map<Level, std::function<std::shared_ptr<ILevelCpp>()>> m_levels = 
-    {
-        {Level::OOP, []() { return std::make_shared<Oop>(); }},
-        {Level::Basic, []() { return std::make_shared<BasicCpp>(); }},
-        {Level::Advanced, []() { return std::make_shared<AdvancedCpp>(); }},
-        {Level::Expert, []() { return std::make_shared<ExpertCpp>(); }},
-        {Level::PattertsIdioms, []() { return std::make_shared<PatternsIdioms>(); }},
-        {Level::Testing, []() { return std::make_shared<TestingLevel>(); }}
-    };
-
+    const std::map<Level, std::function<std::shared_ptr<ILevelCpp>()>> m_levels;
+    
     public:
-    std::shared_ptr<ILevelCpp> GetLevel(Level level) 
-    {
-        auto& levelCreator = m_levels.at(level);
-        return levelCreator();
-    }
-
-    private:
+    LevelFactory();
+    std::shared_ptr<ILevelCpp> GetLevel(Level level);
 };
 
 #endif /* __LEVEL_FACTORY__ */
